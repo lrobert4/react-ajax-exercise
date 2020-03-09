@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Home from './components/Home'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+export default class index extends Component {
+    render() {
+        return (
+            <div>
+                <Home />
+            </div>
+        )
+    }
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+    <Home />,
+    document.querySelector('#root')
+)
