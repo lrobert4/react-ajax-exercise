@@ -6,7 +6,7 @@ export default class Search extends Component {
 
     onFormSubmit = (event) => {
         event.preventDefault()
-        console.log(this.state.entry)
+        this.props.onSearchSubmit(this.state.entry)
     }
 
     render() {
