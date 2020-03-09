@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class Results extends Component {
+export default class SearchContainer extends Component {
     render() {
         return (
             <div>
-                The show list
+                
             </div>
         )
     }

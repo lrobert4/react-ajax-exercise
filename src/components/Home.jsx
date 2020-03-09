@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import Search from './Search.jsx'
 import axios from 'axios'
+import Results from './Results'
+
 
 export default class Home extends Component {
 
     state = { shows: [] }
     onSearchSubmit = async (entry) => {
         const request = await axios.get(`http://api.tvmaze.com/search/shows?q=${entry}`)
-        this.setState({shows:request.data })
+        this.setState({ shows:request.data })
+        
     }
 
     render() {
@@ -17,7 +20,8 @@ export default class Home extends Component {
                     <h1>TVMaze React</h1>
                 </div>
                 <Search onSearchSubmit={this.onSearchSubmit} />
-                We have { this.state.shows.length } shows.
+                We have { this.state.shows.length } shows
+                <Results />
             </div>
         )
     }
