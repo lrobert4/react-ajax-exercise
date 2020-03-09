@@ -5,7 +5,7 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <div class="ui center aligned container ui header">TVMaze React</div>
+                <div className="ui center aligned container ui header">TVMaze React</div>
                 <Search />
             </div>
         )
